@@ -1,1 +1,3 @@
-# physics-simulations
+# Physics Simulations
+
+currently only a pendulum...
