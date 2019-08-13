@@ -1,3 +1,3 @@
 # Physics Simulations
 
-currently only a pendulum...
+Contains a collision engine and a double pendulum
