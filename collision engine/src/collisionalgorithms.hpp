@@ -20,4 +20,4 @@ double calculateNValue(Particle* p, Particle* q, double dt);
 
 void particleTakeBack(Particle* p, double n, int direction);
 
-double random(int lowerBound, int upperBound);
+int random(int lowerBound, int upperBound);

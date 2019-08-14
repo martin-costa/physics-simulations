@@ -17,6 +17,6 @@ int main();
 
 void inputs();
 
-sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "double pendulum chaos", sf::Style::Titlebar);
+sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "collision engine", sf::Style::Titlebar);
 
-Engine engine(WIDTH, HEIGHT, HEIGHT/10);
+Engine engine(WIDTH, HEIGHT, HEIGHT/3);

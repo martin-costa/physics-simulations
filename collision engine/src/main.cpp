@@ -19,9 +19,9 @@ int main() {
 
     window.display();
 
-    window.clear(sf::Color(169, 169, 169));
+    window.clear(sf::Color(0, 0, 0));
 
-    framerate(FPS, true);
+    framerate(FPS, false);
   }
 }
 
@@ -44,11 +44,11 @@ void inputs() {
     Particle p1(25);
     Particle p2(25);
 
-    p1.pos = Vector2(50, HEIGHT / 2 + 50);
+    p1.pos = Vector2(50, HEIGHT / 2);
     p1.vel = Vector2(10000, 0);
 
-    p2.pos = Vector2(50, HEIGHT / 2 - 59);
-    p2.vel = Vector2(10000, 0);
+    p2.pos = Vector2(WIDTH - 50, HEIGHT / 2);
+    p2.vel = Vector2(-10000, 0);
 
     engine.addParticle(p1);
     engine.addParticle(p2);
@@ -68,12 +68,12 @@ void inputs() {
     sf::Vector2i mousePos = leftMouse.pos();
 
     p.pos = Vector2(mousePos.x, HEIGHT - mousePos.y);
-    engine.addParticle(p);
+    engine.addRigidParticle(p);
   }
 
   static MouseDetector rightMouse(sf::Mouse::Right, &window);
   if (rightMouse.clicked()) {
-    Particle p(25);
+    Particle p(random(25, 25));
 
     sf::Vector2i mousePos = leftMouse.pos();
 

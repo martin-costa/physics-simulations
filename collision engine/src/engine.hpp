@@ -4,18 +4,22 @@
 
 class Engine {
 private:
+
   int width;
   int height;
 
-  int scale;
+  double scale;
 
   std::vector<Particle> particles;
+  std::vector<Particle> rigidParticles;
 
   sf::CircleShape circle;
 
   void updateMovement(int fps, int iterations);
 
   void particleCollisions(double dt);
+
+  void drawParticleVector(sf::RenderWindow* window, std::vector<Particle>* particles, sf::Color color);
 
 public:
 
@@ -30,6 +34,9 @@ public:
 
   //add a particle to the engine
   void addParticle(Particle p);
+
+  //add an immovable particle to the engine
+  void addRigidParticle(Particle p);
 
   //reset the engine scene
   void reset();
